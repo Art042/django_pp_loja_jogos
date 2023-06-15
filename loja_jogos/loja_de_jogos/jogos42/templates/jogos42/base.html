@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loja de Jogos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'jogos42/css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Loja de Jogos</h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/* styles.css */
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.formulario-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formulario {
+    background-color: #171a21;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.formulario h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.formulario button[type="submit"] {
+    background-color: #30a85a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adicione mais estilos conforme necessário */
