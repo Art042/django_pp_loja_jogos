@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Disponibilidade</title>
+</head>
+<body>
+    <h1>Consultar Disponibilidade</h1>
+    
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Preço</th>
+        </tr>
+        {% for jogo in jogos %}
+        <tr>
+            <td>{{ jogo.titulo }}</td>
+            <td>{{ jogo.jogoplataforma_set.first.preco_diario }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

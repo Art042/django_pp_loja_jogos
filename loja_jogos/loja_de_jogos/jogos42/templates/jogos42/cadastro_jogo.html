@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Jogo</title>
+</head>
+<body>
+    <h1>Cadastro de Jogo</h1>
+    
+    {% if success %}
+    <p>Jogo cadastrado com sucesso!</p>
+    {% endif %}
+    
+    <form method="post" action="{% url 'cadastro_jogo' %}">
+        {% csrf_token %}
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <br>
+        <label for="plataforma">Plataforma:</label>
+        <select id="plataforma" name="plataforma" required>
+            {% for plataforma in plataformas %}
+            <option value="{{ plataforma.id }}">{{ plataforma.nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="preco_diario">Preço Diário:</label>
+        <input type="text" id="preco_diario" name="preco_diario" required>
+        <br>
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>

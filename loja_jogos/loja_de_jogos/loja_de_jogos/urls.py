@@ -15,11 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from jogos42 import views
+from jogos42.views import (
+    cadastrar_cliente,
+    cadastrar_jogo,
+    consultar_disponibilidade,
+    pagina_inicial,
+)
 
 app_name = 'jogos42'
 
 urlpatterns = [
     # path('', views.index, name='index'),
-    path('', views.cadastrar_cliente, name='cadastrar_cliente'),
+    path('', pagina_inicial.as_view(), name='pagina_inicial'),
+    path('cadastro/cliente/', cadastrar_cliente, name='cadastro_cliente'),
+    path('cadastro/jogo/', cadastrar_jogo, name='cadastro_jogo'),
+    path('consulta/disponibilidade/', consultar_disponibilidade, name='consultar_disponibilidade'),
 ]
