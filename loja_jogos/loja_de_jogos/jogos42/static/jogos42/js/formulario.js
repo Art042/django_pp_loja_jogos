@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function isValidEmail(email) {
-        // Implemente sua lógica de validação de email aqui
-        // Retorna true se o email for válido, caso contrário, retorna false
-        // Exemplo simples para fins de demonstração:
+
         return email.includes('@');
     }
 });
